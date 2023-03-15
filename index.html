@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <br /><br /><br />
+        <h3>
+            Nhập vào các số nguyên và lưu trữ trong mảng. Thực hiện các chức năng
+            bên dưới
+        </h3>
+        <div class="row py-3">
+            <div class="col-6">
+                <div class="form-group">
+                    <input type="number" class="form-control" name="" id="inputNumber" placeholder="Nhập số n" />
+                </div>
+            </div>
+            <div class="col-6">
+                <button class="btn btn-primary" id="btnInput">Thêm số</button>
+            </div>
+        </div>
+        <div class="ketqua">
+            <i class="fa fa-hand-point-right"></i> <span id="reSult"></span>
+        </div>
+        <ul class="py-5">
+            <li>
+                <input type="checkbox" checked name="" id="" />
+                <i></i>
+                <p> 1 - Tổng số dương</p>
+                <div class="content">
+                    <button class="btn btn-primary" id="btnTinhTong">Tính tổng</button>
+                    <div class="ketqua">
+                        <i class="fa fa-hand-point-right"></i> <span id="result1"></span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <input type="checkbox" checked name="" id="" />
+                <i></i>
+                <p> 2 - Đếm số dương</p>
+                <div class="content">
+                    <button class="btn btn-primary" id="btnDemSo">Đếm Số</button>
+                    <div class="ketqua">
+                        <i class="fa fa-hand-point-right"></i> <span id="ketQua2"></span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <input type="checkbox" checked name="" id="" />
+                <i></i>
+                <p> 3 - Tìm số nhỏ nhất</p>
+                <div class="content">
+                    <button class="btn btn-primary" id="btnTimSoNhoNhat">Tìm số nhỏ nhất</button>
+                    <div class="ketqua">
+                        <i class="fa fa-hand-point-right"></i> <span id="ketQua3"></span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <input type="checkbox" checked name="" id="" />
+                <i></i>
+                <p> 4 - Tìm số dương nhỏ nhất</p>
+                <div class="content">
+                    <button class="btn btn-primary" id="btnTimSoDuongNhoNhat">Tìm số dương nhỏ nhất</button>
+                    <div class="ketqua">
+                        <i class="fa fa-hand-point-right"></i> <span id="ketQua4"></span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <input type="checkbox" checked name="" id="" />
+                <i></i>
+                <p> 5 - Tìm số chẵn cuối cùng</p>
+                <div class="content">
+                    <button class="btn btn-primary" id="btnTimSoChanCuoiCung">Tìm số chẵn cuối cùng</button>
+                    <div class="ketqua">
+                        <i class="fa fa-hand-point-right"></i> <span id="ketQua5"></span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <input type="checkbox" checked name="" id="" />
+                <i></i>
+                <p> 6 - Đổi chỗ</p>
+                <div class="content">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <input type="number" class="form-control" name="" id="" placeholder="Nhập số vị trí 1">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <input type="number" class="form-control" name="" id="" placeholder="Nhập số vị trí 2">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" id="btnDoiCho">Đổi chỗ</button>
+                    <div class="ketqua">
+                        <i class="fa fa-hand-point-right"></i> <span id="ketQua1"></span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <input type="checkbox" checked name="" id="" />
+                <i></i>
+                <p> 7 - Sắp xếp tăng dần</p>
+                <div class="content">
+                    <button class="btn btn-primary" id="btnSapXepTangDan">Sắp xếp</button>
+                    <div class="ketqua">
+                        <i class="fa fa-hand-point-right"></i> <span id="ketQua7"></span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <input type="checkbox" checked name="" id="" />
+                <i></i>
+                <p> 8 - Tìm số nguyên tố đầu tiên</p>
+                <div class="content">
+                    <button class="btn btn-primary" id="btnTimSoNguyenToDauTien">Tìm số nguyên tố</button>
+                    <div class="ketqua">
+                        <i class="fa fa-hand-point-right"></i> <span id="ketQua1"></span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <input type="checkbox" checked name="" id="" />
+                <i></i>
+                <p> 9 - Đếm số nguyên</p>
+                <div class="content">
+                    <div class="row py-3">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <input type="number" class="form-control" name="" id="" placeholder="Nhập số" />
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-primary" id="btnThemSo9">Thêm số</button>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" id="btnDemSoNguyen">Đếm số</button>
+                    <div class="ketqua">
+                        <i class="fa fa-hand-point-right"></i> <span id="ketQua9"></span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <input type="checkbox" checked name="" id="" />
+                <i></i>
+                <p> 10 - So sánh số lượng số âm và số dương</p>
+                <div class="content">
+                    <button class="btn btn-primary" id="btnSoSanh">So Sánh</button>
+                    <div class="ketqua">
+                        <i class="fa fa-hand-point-right"></i> <span id="ketQua10"></span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
