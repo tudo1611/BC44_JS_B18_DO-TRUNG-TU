@@ -14,8 +14,6 @@ var inputNum9 = document.querySelector("#inputNum9");
 var resultInput9 = document.querySelector("#resultInput9");
 var result10 = document.querySelector("#result10");
 
-
-
 document.querySelector("#btnInput").addEventListener("click", function () {
   arrayNum.push(inputNum.value.trim());
   result.innerHTML = arrayNum;
@@ -83,6 +81,7 @@ function find_last_even(arrayNum) {
   for (var i = arrayNum.length - 1; i >= 0; i--) {
     if (check_chan_le(arrayNum[i]) == 0) return arrayNum[i];
   }
+  return -1;
 }
 document
   .querySelector("#btnTimSoChanCuoiCung")
@@ -120,31 +119,30 @@ document
   });
 
 //8- tìm số nguyên tố đầu tiên
-function kiemTraSoNguyenTo(number) {
-  var checkSNT = true;
+function isPrime(number) {
   if (number < 2) {
-    checkSNT = false;
-  } else {
-    for (var i = 2; i <= Math.sqrt(number); i++) {
-      if (number % i === 0) {
-        checkSNT = false;
-        break;
-      }
+    return false;
+  }
+  for (var i = 2; i <= Math.sqrt(number); i++) {
+    if (number % i === 0) {
+      return false;
     }
   }
-  return checkSNT;
+  return true;
+}
+
+function find_fisrt_prime(arr) {
+  for (var i = 0; i < arr.length; i++) {
+    if (isPrime(arr[i])) {
+      return arr[i];
+    }
+  }
+  return -1;
 }
 document
   .querySelector("#btnTimSoNguyenToDauTien")
   .addEventListener("click", function () {
-    let soNguyenToDauTien;
-    for (var i = 0; i < arrayNum.length; i++) {
-      if (kiemTraSoNguyenTo(arrayNum[i])) {
-        soNguyenToDauTien = arrayNum[i];
-        break;
-      }
-    }
-    result8.innerHTML = "Số nguyên tố đầu tiên: " + soNguyenToDauTien;
+    result8.innerHTML = "Số nguyên tố đầu tiên: " + find_fisrt_prime(arrayNum);
   });
 
 //9 - Đếm số nguyên
@@ -185,10 +183,10 @@ document
 //   return flag;
 // }
 
-document.querySelector("#btnSoSanh").addEventListener('click', function () {
+document.querySelector("#btnSoSanh").addEventListener("click", function () {
   var soAm = [];
   var soDuong = [];
-  for ( var i = 0; i < arrayNum.length; i++) {
+  for (var i = 0; i < arrayNum.length; i++) {
     if (arrayNum[i] > 0) {
       soDuong.push(arrayNum[i]);
     }
@@ -196,11 +194,11 @@ document.querySelector("#btnSoSanh").addEventListener('click', function () {
       soAm.push(arrayNum[i]);
     }
   }
-  if ( soAm.length == soDuong.length) {
-    result10.innerHTML = 'số âm = số dương';
-  } else if ( soAm.length > soDuong.length) {
-    result10.innerHTML = 'số âm > số dương';
+  if (soAm.length == soDuong.length) {
+    result10.innerHTML = "số âm = số dương";
+  } else if (soAm.length > soDuong.length) {
+    result10.innerHTML = "số âm > số dương";
   } else {
-    result10.innerHTML = 'số âm < số dương';
+    result10.innerHTML = "số âm < số dương";
   }
 });
